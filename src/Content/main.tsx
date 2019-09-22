@@ -34,7 +34,6 @@ export default function Main(props) {
       <AppBarContent />
       <main className={classes.content}>
         <div className={classes.toolbar} />
-        ghghg
         <Routing />
       </main>
     </div>

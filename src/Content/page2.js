@@ -6,7 +6,11 @@ function Content(props) {
   const x = "foo";
   return (
     <>
-      <p>page 2{haha}</p>
+      <p>page 2 {haha}</p>
+
+      <p>{haha}</p>
+
+      <p>{x}</p>
 
       <NavLink
         to={{

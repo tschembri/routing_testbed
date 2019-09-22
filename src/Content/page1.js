@@ -1,7 +1,12 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-function Content() {
+function Content(props) {
+  if (typeof props.location.state === "undefined") {
+    // color is undefined
+  } else {
+    const { haha } = props.location.state;
+  }
   return (
     <>
       <p> page 1</p>
