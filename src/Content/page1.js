@@ -2,19 +2,28 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 function Content(props) {
-  if (typeof props.location.state === "undefined") {
-    // color is undefined
+  let haha = "1";
+
+  if (haha === "undefined") {
+    haha = "2";
   } else {
-    const { haha } = props.location.state;
+    haha = "3";
+  }
+  if (typeof props.location.state === "undefined") {
+    haha = "no props";
+  } else {
+    haha = false;
+    var { haha1 } = props.location.state;
   }
   return (
     <>
-      <p> page 1</p>
+      {haha ? <p>page 1 {haha} </p> : <p>page 1 {haha1} </p>}
+
       <NavLink
         to={{
           pathname: "/page2",
           state: {
-            haha: "true"
+            haha: "true111"
           }
         }}
       >

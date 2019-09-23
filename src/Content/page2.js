@@ -14,7 +14,10 @@ function Content(props) {
 
       <NavLink
         to={{
-          pathname: "/page1"
+          pathname: "/page1",
+          state: {
+            haha1: "lol"
+          }
         }}
       >
         Goto page 1
