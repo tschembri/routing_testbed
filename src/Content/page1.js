@@ -1,8 +1,14 @@
+import { GetBlah } from "./blah";
 import React from "react";
 import { NavLink } from "react-router-dom";
 
+function GetBlah2() {
+  return "yah";
+}
+
 function Content(props) {
-  let haha = "1";
+  let foo = GetBlah();
+  let haha = "x";
 
   if (typeof props.location.state === "undefined") {
     haha = "no props";
@@ -12,7 +18,15 @@ function Content(props) {
   }
   return (
     <>
-      {haha ? <p>page 1 {haha} </p> : <p>page 1 {haha1} </p>}
+      {haha ? (
+        <p>
+          page 1 {haha} {foo}{" "}
+        </p>
+      ) : (
+        <p>
+          page 1 {haha1} {foo}{" "}
+        </p>
+      )}
 
       <NavLink
         to={{
